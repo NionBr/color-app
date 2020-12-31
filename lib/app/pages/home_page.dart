@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   double red = 0, green = 0, blue = 0;
-  String value = "000000";
+  String initialValue = "000000";
 
   void showToast() {
     Fluttertoast.showToast(
@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    value = convert.rgb.hex(red, green, blue);
+    initialValue = convert.rgb.hex(red, green, blue);
     return Scaffold(
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "#$value",
+                    "#$initialValue",
                     style: TextStyle(
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     onPressed: () {
                       showToast();
-                      Clipboard.setData(ClipboardData(text: "#$value"));
+                      Clipboard.setData(ClipboardData(text: "#$initialValue"));
                     },
                     backgroundColor: Color.fromARGB(
                       255,
