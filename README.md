@@ -2,7 +2,7 @@
 
 Uma simples aplicação para geração de cores atravez do sistema RGB.
 
-<img src="/assets/gifs/mockup.GIF" width="300" height="500"/>
+<img src="/assets/mockup.GIF" width="300" height="500"/>
 
 # Clonando o Repositório
 
